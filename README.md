@@ -19,7 +19,7 @@
 
 #### MVP Objective
 
-This application allows a user to enter and view a record of Vendor customers and Orders for a pastry shop.
+This application allows a user to enter and view a record of Vendor customers and their Orders for a pastry shop.
 
 ### User Interface
 
