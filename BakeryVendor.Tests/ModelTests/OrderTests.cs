@@ -64,6 +64,23 @@ namespace ToDoList.Tests
       CollectionAssert.AreEqual(newOrder, result);
     }
 
+    [TestMethod]
+    public void GetAll_ReturnsOrder_OrderList()
+    {
+      //Arrange
+      string description01 = "2022_01_01 Party Cake";
+      string description02 = "2022_01_03 Bear Claws";
+      Order newOrder1 = new Order(description01);
+      Order newOrder2 = new Order(description02);
+      List<Order> newList = new List<Order> { newOrder1, newOrder2 };
+
+      //Act
+      List<Order> result = Order.GetAll();
+
+      //Assert
+      CollectionAssert.AreEqual(newList, result);
+    }
+
 
   }
 }
