@@ -35,5 +35,22 @@ namespace ToDoList.Tests
       Assert.AreEqual(description, result);
     }
 
+     [TestMethod]
+    public void SetDescription_SetDescription_String()
+    {
+      //Arrange
+      string description = "2022_01_01 Cake.";
+      Order newOrder  = new Order(description);
+
+      //Act
+      string updatedDescription = "2022_01_01 Party Cake";
+      newOrder.Description = updatedDescription;
+      string result = newOrder.Description;
+
+      //Assert
+      Assert.AreEqual(updatedDescription, result);
+    }
+    
+
   }
 }
