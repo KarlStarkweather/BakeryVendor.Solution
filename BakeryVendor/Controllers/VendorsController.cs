@@ -40,11 +40,14 @@ namespace ToDoList.Controllers
     }
 
     [HttpPost("/vendors/{vendorId}/orders")]
-    public ActionResult Create(int vendorId, string orderDescription)
+    public ActionResult Create(int vendorId, string orderDate, int orderAmount, string orderSummary, string orderDescription)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
       Vendor foundVendor = Vendor.Find(vendorId);
       Order newOrder = new Order(orderDescription);
+      newOrder.Date = orderDate;
+      newOrder.Amount = orderAmount;
+      newOrder.Summary = orderSummary;
       foundVendor.AddOrder(newOrder);
       List<Order> vendorOrders = foundVendor.Orders;
       model.Add("orders", vendorOrders);
