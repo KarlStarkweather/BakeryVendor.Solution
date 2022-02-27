@@ -95,6 +95,22 @@ namespace ToDoList.Tests
       Assert.AreEqual(1, result);
     }
 
+    [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      //Arrange
+      string description01 = "2022_01_01 Party Cake";
+      string description02 = "2022_01_03 Bear Claws";
+      Order newOrder1 = new Order(description01);
+      Order newOrder2 = new Order(description02);
+
+      //Act
+      Order result = Order.Find(2);
+
+      //Assert
+      Assert.AreEqual(newOrder2, result);
+    }
+
 
   }
 }
