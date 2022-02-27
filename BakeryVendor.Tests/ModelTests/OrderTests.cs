@@ -50,7 +50,20 @@ namespace ToDoList.Tests
       //Assert
       Assert.AreEqual(updatedDescription, result);
     }
-    
+
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_OrderList()
+    {
+      // Arrange
+      List<Order> newOrder = new List<Order> { };
+
+      // Act
+      List<Order> result = Order.GetAll();
+
+      // Assert
+      CollectionAssert.AreEqual(newOrder, result);
+    }
+
 
   }
 }
