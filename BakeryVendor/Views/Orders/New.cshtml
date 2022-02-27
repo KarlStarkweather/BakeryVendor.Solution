@@ -4,8 +4,8 @@
   <input id = "vendorId" name = "vendorId" type="hidden" value="@Model.Id">
   <label for="orderDate">Order Date</label>
   <input id="orderDate" name="orderDate" type="date">  
-  <label for="orderAmount">Amount (dollars only)</label>
-  <input id="orderAmount" name="orderAmount" type="number">
+  <label for="orderAmount">Amount</label>
+  <input id="orderAmount" pattern="(\d*)([\.])(\d{2})" name="orderAmount" type="text">
   <label for="orderSummary">Brief Summary</label>
   <input id="orderSummary" name="orderSummary" type="text">
   <label for="orderDescription">Detailed Description</label>
