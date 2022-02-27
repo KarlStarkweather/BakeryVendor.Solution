@@ -38,7 +38,7 @@ in the terminal
 
 ## Known Bugs
 
-- _None._
+- Order Amount is not retaining currency formatting on Order Show
 
 ## License
 
