@@ -81,6 +81,20 @@ namespace ToDoList.Tests
       CollectionAssert.AreEqual(newList, result);
     }
 
+    [TestMethod]
+    public void GetId_OrdersInstantiateWithAnIdAndGetterReturns_Int()
+    {
+      //Arrange
+      string description = "2022_01_01 Party Cake";
+      Order newOrder = new Order(description);
+
+      //Act
+      int result = newOrder.Id;
+
+      //Assert
+      Assert.AreEqual(1, result);
+    }
+
 
   }
 }
